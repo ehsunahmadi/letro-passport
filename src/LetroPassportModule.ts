@@ -1,11 +1,7 @@
 import { NativeModule, requireNativeModule } from "expo";
 
-import type { LetroPassportModuleEvents } from "./LetroPassport.types";
-
-declare class LetroPassportModule extends NativeModule<LetroPassportModuleEvents> {
-	PI: number;
-	hello(): string;
-	setValueAsync(value: string): Promise<void>;
+declare class LetroPassportModule extends NativeModule {
+	getApiKey(): string;
 }
 
 // This call loads the native module object from the JSI.
