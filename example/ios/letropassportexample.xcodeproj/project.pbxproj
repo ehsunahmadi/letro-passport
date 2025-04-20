@@ -14,7 +14,7 @@
 		96905EF65AED1B983A6B3ABC /* libPods-letropassportexample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-letropassportexample.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		16E1A27CEB86468091D9B325 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ECAABA8B5D47F98731C900 /* noop-file.swift */; };
+		2BFC60D8304148E692C2C5BA /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C93F62B0CD4C82A623E193 /* noop-file.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +31,8 @@
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-letropassportexample/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		79ECAABA8B5D47F98731C900 /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "letropassportexample/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
-		314B5E193BC84B78ACA1834F /* letropassportexample-Bridging-Header.h */ = {isa = PBXFileReference; name = "letropassportexample-Bridging-Header.h"; path = "letropassportexample/letropassportexample-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		08C93F62B0CD4C82A623E193 /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "letropassportexample/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		FFE762AE60F24EBC887FCE24 /* letropassportexample-Bridging-Header.h */ = {isa = PBXFileReference; name = "letropassportexample-Bridging-Header.h"; path = "letropassportexample/letropassportexample-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +57,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				79ECAABA8B5D47F98731C900 /* noop-file.swift */,
-				314B5E193BC84B78ACA1834F /* letropassportexample-Bridging-Header.h */,
+				08C93F62B0CD4C82A623E193 /* noop-file.swift */,
+				FFE762AE60F24EBC887FCE24 /* letropassportexample-Bridging-Header.h */,
 			);
 			name = letropassportexample;
 			sourceTree = "<group>";
@@ -198,7 +198,7 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				7D870BCF6B13419BBD244659 /* letropassportexample-Bridging-Header.h in Resources */,
+				3862F9DC15E04D3EAE1628AD /* letropassportexample-Bridging-Header.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +274,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
-				16E1A27CEB86468091D9B325 /* noop-file.swift in Sources */,
+				2BFC60D8304148E692C2C5BA /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
