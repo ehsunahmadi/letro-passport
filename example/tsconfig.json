@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "letro-passport": ["../src/index"],
+      "letro-passport/*": ["../src/*"]
+    }
+  }
+}

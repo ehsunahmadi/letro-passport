@@ -1,0 +1,17 @@
+{
+  "platforms": [
+    "apple",
+    "android",
+    "web"
+  ],
+  "apple": {
+    "modules": [
+      "LetroPassportModule"
+    ]
+  },
+  "android": {
+    "modules": [
+      "expo.modules.letropassport.LetroPassportModule"
+    ]
+  }
+}
