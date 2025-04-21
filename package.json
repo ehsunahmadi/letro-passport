@@ -28,11 +28,13 @@
   "author": "ehsun ahmadi <ehsun.ahmadi@gmail.com> (https://github.com/ehsunahmadi)",
   "license": "MIT",
   "homepage": "https://github.com/ehsunahmadi/letro-passport#readme",
-  "dependencies": {},
+  "dependencies": {
+    "react-native-fs": "^2.20.0"
+  },
   "devDependencies": {
     "@types/react": "~18.3.12",
-    "expo-module-scripts": "^4.0.4",
     "expo": "~52.0.0",
+    "expo-module-scripts": "^4.0.4",
     "react-native": "0.76.0"
   },
   "peerDependencies": {

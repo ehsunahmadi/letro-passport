@@ -1,30 +1,13 @@
-import {
-	AndroidConfig,
-	type ConfigPlugin,
-	withAndroidManifest,
-	withInfoPlist,
-} from "expo/config-plugins";
+import type { ConfigPlugin } from "expo/config-plugins";
+import withCustomGradleProperties from "./withCustomGradleProperties";
+import withCustomProjectBuildGradle from "./withCustomProjectBuildGradle";
+import withMyApiKey from "./withMyApiKey";
 
-const withMyApiKey: ConfigPlugin<{ apiKey: string }> = (config, { apiKey }) => {
-	let newConfig = withInfoPlist(config, (config) => {
-		config.modResults.MY_CUSTOM_API_KEY = apiKey;
-		return config;
-	});
-
-	newConfig = withAndroidManifest(config, (config) => {
-		const mainApplication = AndroidConfig.Manifest.getMainApplicationOrThrow(
-			config.modResults,
-		);
-
-		AndroidConfig.Manifest.addMetaDataItemToMainApplication(
-			mainApplication,
-			"MY_CUSTOM_API_KEY",
-			apiKey,
-		);
-		return config;
-	});
-
+const withConfig: ConfigPlugin<{ apiKey: string }> = (config, { apiKey }) => {
+	let newConfig = withMyApiKey(config, { apiKey });
+	newConfig = withCustomProjectBuildGradle(newConfig);
+	newConfig = withCustomGradleProperties(newConfig);
 	return newConfig;
 };
 
-export default withMyApiKey;
+export default withConfig;
