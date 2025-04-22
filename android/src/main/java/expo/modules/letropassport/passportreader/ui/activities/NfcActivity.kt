@@ -30,6 +30,7 @@ class NfcActivity : androidx.fragment.app.FragmentActivity(), NfcFragment.NfcFra
     private var mrzInfo: MRZInfo? = null
 
     private var nfcAdapter: NfcAdapter? = null
+    private var pendingIntent: PendingIntent? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +49,12 @@ class NfcActivity : androidx.fragment.app.FragmentActivity(), NfcFragment.NfcFra
             finish()
             return
         }       
+
+        pendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            PendingIntent.getActivity(this, 0, Intent(this, javaClass).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), PendingIntent.FLAG_MUTABLE)
+        } else{
+            PendingIntent.getActivity(this, 0, Intent(this, javaClass).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0)
+        }
 
 
         if (null == savedInstanceState) {
@@ -96,7 +103,7 @@ class NfcActivity : androidx.fragment.app.FragmentActivity(), NfcFragment.NfcFra
         if (nfcAdapter != null) {
             if (!nfcAdapter!!.isEnabled)
                 showWirelessSettings()
-            val pendingIntent = PendingIntent.getActivity(this, 0, Intent(this, javaClass).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), PendingIntent.FLAG_MUTABLE)
+
             nfcAdapter!!.enableForegroundDispatch(this, pendingIntent, null, null)
         }
     }

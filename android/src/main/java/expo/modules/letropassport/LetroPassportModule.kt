@@ -60,7 +60,7 @@ import org.jmrtd.lds.iso19794.FaceImageInfo
 import org.json.JSONObject
 import expo.modules.letropassport.ImageUtil
 import android.provider.MediaStore
-
+import android.os.Build
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -336,7 +336,12 @@ class LetroPassportModule : Module() {
     val activity = appContext.currentActivity
     val intent = Intent(activity?.applicationContext, activity?.javaClass)
     intent?.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
-    val pendingIntent = PendingIntent.getActivity(activity, 0, intent, PendingIntent.FLAG_MUTABLE)
+    val pendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+          PendingIntent.getActivity(activity, 0, intent, PendingIntent.FLAG_MUTABLE)
+
+    } else {
+       PendingIntent.getActivity(activity, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+    }
     val filter = arrayOf(arrayOf(IsoDep::class.java.name))
     mNfcAdapter.enableForegroundDispatch(activity, pendingIntent, null, filter)
   }
