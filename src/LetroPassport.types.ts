@@ -1,19 +1,51 @@
-import type { StyleProp, ViewStyle } from 'react-native';
-
-export type OnLoadEventPayload = {
-  url: string;
-};
-
-export type LetroPassportModuleEvents = {
-  onChange: (params: ChangeEventPayload) => void;
-};
-
 export type ChangeEventPayload = {
-  value: string;
+	value: string;
 };
 
-export type LetroPassportViewProps = {
-  url: string;
-  onLoad: (event: { nativeEvent: OnLoadEventPayload }) => void;
-  style?: StyleProp<ViewStyle>;
+export type PassportDataType = {
+	dg2Hash?: number[];
+	dsc: string;
+	signedAttr: number[];
+	encryptedDigest: number[];
+	photoBase64: string;
+	mockUser?: boolean;
+	LDSVersion: string;
+	photo: { base64: string; width: string; height: string };
+	unicodeVersion: string;
+	signerInfoDigestAlgorithm: string;
+	signatureAlgorithm: string;
+	eContent: string;
+	modulus: string;
+	mrz: string;
+	dataGroupHashes: string;
+	digestAlgorithm: string;
+	digestEncryptionAlgorithm: string;
+	documentSigningCertificate: string;
+	activeAuthenticationChallenge: string;
+	activeAuthenticationPassed: string;
+	activeAuthenticationSignature: string;
+	dataGroupsPresent: string;
+	dateOfBirth: string;
+	documentExpiryDate: string;
+	documentNumber: string;
+	documentSigningCertificateVerified: string;
+	documentSubType: string;
+	documentType: string;
+	eContentBase64: string;
+	encapsulatedContentDigestAlgorithm: string;
+	firstName: string;
+	gender: string;
+	isChipAuthenticationSupported: string;
+	isPACESupported: string;
+	issuingAuthority: string;
+	lastName: string;
+	nationality: string;
+	passportCorrectlySigned: string;
+	passportDataNotTampered: string;
+	passportMRZ: string;
+	passportPhoto: string;
+	personalNumber: string;
+	signatureBase64: string;
+	signedAttributes: string;
+	verificationErrors: string;
 };

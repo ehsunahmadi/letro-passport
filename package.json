@@ -29,9 +29,10 @@
   "license": "MIT",
   "homepage": "https://github.com/ehsunahmadi/letro-passport#readme",
   "dependencies": {
-    "react-native-fs": "^2.20.0"
+    "expo-file-system": "~18.0.12"
   },
   "devDependencies": {
+    "@react-native-community/cli": "^18.0.0",
     "@types/react": "~18.3.12",
     "expo": "~52.0.0",
     "expo-module-scripts": "^4.0.4",
