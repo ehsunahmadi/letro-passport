@@ -1,5 +1,2 @@
-import LetroPassportModule from "./LetroPassportModule";
-
-export function getApiKey(): string {
-	return LetroPassportModule.getApiKey();
-}
+export * from "./passport";
+export * from "./prove";

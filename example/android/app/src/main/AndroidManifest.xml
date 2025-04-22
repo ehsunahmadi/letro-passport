@@ -13,6 +13,7 @@
   </queries>
   <application android:name=".MainApplication" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:allowBackup="true" android:theme="@style/AppTheme" android:supportsRtl="true">
     <meta-data android:name="MY_CUSTOM_API_KEY" android:value="custom_secret_api"/>
+    <meta-data android:name="com.google.mlkit.vision.DEPENDENCIES" android:value="ocr"/>
     <meta-data android:name="expo.modules.updates.ENABLED" android:value="false"/>
     <meta-data android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH" android:value="ALWAYS"/>
     <meta-data android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS" android:value="0"/>
@@ -28,5 +29,8 @@
         <data android:scheme="expo.modules.letropassport.example"/>
       </intent-filter>
     </activity>
+    <activity android:name="expo.modules.letropassport.passportreader.ui.activities.CameraActivity" android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden|screenSize" android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" android:windowSoftInputMode="stateAlwaysHidden"/>
+    <activity android:name="expo.modules.letropassport.passportreader.ui.activities.NfcActivity" android:screenOrientation="nosensor" android:keepScreenOn="true"/>
+    <activity android:name="expo.modules.letropassport.passportreader.ui.activities.SelectionActivity" android:screenOrientation="nosensor"/>
   </application>
 </manifest>
