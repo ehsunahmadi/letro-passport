@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/withAndroidManifestUpdate.ts","./src/withCustomGradleProperties.ts","./src/withCustomProjectBuildGradle.ts"],"version":"5.8.3"}
+{"root":["./src/index.ts","./src/withAndroidManifestUpdate.ts","./src/withCustomGradleProperties.ts","./src/withCustomProjectBuildGradle.ts","./src/withPbxProjeModification.ts"],"version":"5.8.3"}
