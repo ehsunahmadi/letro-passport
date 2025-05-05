@@ -9,8 +9,8 @@
 		"clean": "expo-module clean",
 		"lint": "expo-module lint",
 		"test": "expo-module test",
-		"prepare": "expo-module prepare",
-		"prepublishOnly": "expo-module prepublishOnly",
+		"prepare": "expo-module prepare && git restore -- plugin/build/project.pbxproj && git restore -- plugin/build/pnummobileapp-Bridging-Header.h",
+		"prepublishOnly": "expo-module prepublishOnly && git restore -- plugin/build/project.pbxproj && git restore -- plugin/build/pnummobileapp-Bridging-Header.h",
 		"expo-module": "expo-module",
 		"open:ios": "xed example/ios",
 		"open:android": "open -a \"Android Studio\" example/android"
